@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link href="expensetracker.css" type="text/css" rel="stylesheet"/>
+    <script src="expensetracker.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <br><br>
+            <center><h1 style="color: green;">Expense Tracker App</h1></center>
+        </div>
+        <div class="balance">
+            <h1 style="margin-bottom: 20px;"><center>✔ Balance: <p id="balance" style="font-size: 30px;">0</p></h1></center>
+            <div class="res"> 
+                <div class="income">
+                    <center><p>Total Income:</p></center>
+                    <center><b><p style="color: green; font-size: 25px;" id="income">0</p></b></center>
+                </div>
+                <div class="separator"></div>
+                <div class="expense">
+                    <center><p>Total Expenses:</p></center>
+                    <center><b><p style="color: red; font-size: 25px;" id="expenses">0</p></b></center>
+                </div>
+            </div>
+        </div>
+        <div class="edit">
+            <div class="expense-table">
+                <center><h1 style="margin: 20px; font-size: 25px;">Expenses</h1></center>
+                <table id="table">
+                    <thead style="background-color: green;">
+                        <tr>
+                            <th>S.no.</th>
+                            <th>Category</th>
+                            <th>Amount</th>
+                            <th>Type</th>
+                            <th>Date</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="expense-list"></tbody>
+                </table>
+            </div>
+            <div class="separator"></div>
+            <div>
+                <form class="expense-form">
+                    <center><h1 style="margin: 20px; font-size: 25px;">Add New</h1></center>
+                    <div class="add">
+                        <p>Entry Type:</p>
+                        <select id="entry-type">
+                            <option>Expense</option>
+                            <option>Income</option>
+                        </select>
+                    </div>
+                    <div class="add">
+                        <p>Category:</p>
+                        <select id="category">
+                            <option>Income</option>
+                            <option>Food & Drinks</option>
+                            <option>Housing</option>
+                            <option>Entertainment</option>
+                            <option>Health</option>
+                            <option>Education</option>
+                            <option>Shopping</option>
+                            <option>Travel</option>
+                            <option>Insurance</option>
+                            <option>Business Expenses</option>
+                            <option>Donation & Charity</option>
+                        </select>
+                    </div>
+                    <div class="add">
+                        <p>Amount:</p>
+                        <input type="number" id="expense-amount" placeholder="Amount"/>
+                    </div>
+                    <div class="add">
+                        <p>Date: </p>
+                        <input type="date" id="expense-date"/>
+                    </div>
+                    <center>
+                        <button type="button" onclick="addItem()">Add Expense</button>
+                    </center>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

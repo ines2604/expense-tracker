@@ -1,0 +1,90 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family:'Josefin Sans',sans-serif;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: white;
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center;     /* Centre verticalement, optionnel */
+}
+.balance{
+    background-color: white;
+    border-radius: 5px;
+    margin: 30px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(148, 143, 143, 0.5);
+}
+.edit{
+    display: flex;
+    background-color: white;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(148, 143, 143, 0.5);
+    border-radius: 5px;
+    justify-content: space-around;
+    align-items: stretch;
+    
+}
+.add{
+    display: flex;
+    align-items: center;
+}
+.res{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    align-items: stretch; 
+}
+.expense-table , .expense-form{
+    padding :20px;
+    position: relative;
+    margin: 20px;
+}
+.income, .expense{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+.separator{
+    width: 1.5px;
+    background-color: grey;
+    margin: 0 10px;
+    align-self: stretch;
+}
+p{
+    margin: 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+th,td{
+    text-align: center;
+    padding: 15px;
+    vertical-align: middle;
+}
+input,select,button{
+    width: 50%;
+    padding: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;/* Garantit que la largeur inclut le padding et la bordure */
+    font-size: 14px;
+    cursor: pointer;
+}
+select option{
+    padding: 10px;
+}
+input:hover,select:hover,button:hover{
+    outline: none; /*supprime le conteur par défaut*/
+    border-color: green;
+    box-shadow: 0 0 5px rgba(102, 175, 233, 0.5);
+}
